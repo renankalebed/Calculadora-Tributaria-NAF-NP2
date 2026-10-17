@@ -3,7 +3,11 @@ const prisma = require('../config/prisma');
 const calculoController = {
   create: async (req, res) => {
     try {
-      const { tipoProfissao, faturamento, custos } = req.body;
+      // ============================================================================
+      // NOVO - IMPLEMENTAÇÃO NP2 (2026.2) - MEMBRO 1
+      // Captura do 'proLabore' para o cálculo dinâmico do Fator R (Médico e Dentista)
+      // ============================================================================
+      const { tipoProfissao, faturamento, custos, proLabore } = req.body;
       const userId = req.userId;
 
       if (!tipoProfissao || faturamento === undefined) {
@@ -12,6 +16,8 @@ const calculoController = {
 
       const rendaNum = parseFloat(faturamento);
       const custosNum = custos ? parseFloat(custos) : 0;
+      // NP2: Conversão numérica do pró-labore informado
+      const proLaboreNum = proLabore ? parseFloat(proLabore) : 0;
 
       // --- REGRA DE NEGÓCIO DA PESSOA FÍSICA (IRPF 2026) ---
       const basePF = rendaNum - custosNum;
@@ -37,16 +43,41 @@ const calculoController = {
 
       // --- REGRA DE NEGÓCIO DA PESSOA JURÍDICA (Simples Nacional 2026) ---
       let simples = 0;
-      if (tipoProfissao.toLowerCase() === "advogado") {
+      let anexoEnquadrado = "";
+      let fatorRPercentual = "0.00%";
+
+      const profissaoNormalizada = tipoProfissao.toLowerCase().trim();
+
+      // ============================================================================
+      // NOVO - REGRA DO FATOR R (MÉDICO E DENTISTA) - NP2 2026.2
+      // Fator R = (Pró-Labore 12m) / (Receita Bruta 12m)
+      // Se Fator R >= 28% (0.28) -> Anexo III (alíquota inicial de 6%)
+      // Se Fator R < 28% (0.28)  -> Anexo V (alíquota inicial de 15,5%)
+      // ============================================================================
+      if (profissaoNormalizada === "medico" || profissaoNormalizada === "dentista") {
+        const fatorR = rendaNum > 0 ? (proLaboreNum / rendaNum) : 0;
+        fatorRPercentual = (fatorR * 100).toFixed(2) + "%";
+
+        if (fatorR >= 0.28) {
+          anexoEnquadrado = "Anexo III";
+          simples = rendaNum * 0.06; // 6%
+        } else {
+          anexoEnquadrado = "Anexo V";
+          simples = rendaNum * 0.155; // 15,5%
+        }
+      } else if (profissaoNormalizada === "advogado") {
+        anexoEnquadrado = "Anexo IV";
         simples = rendaNum * 0.045; // Anexo IV: 4,5%
       } else {
-        // Psicólogo e Arquiteto - Anexo III (Considerando o Fator R ativo no front)
+        // Psicólogo, Arquiteto e demais profissões - Anexo III
+        anexoEnquadrado = "Anexo III";
         simples = rendaNum * 0.06; // 6%
       }
 
+      // --- CÁLCULO DE INSS E PROJETO PRÓ-LABORE MÍNIMO ---
       const salario28 = rendaNum * 0.28;
       const salarioMin = 1621; // Salário mínimo projetado para 2026
-      const salarioBase = salario28 < salarioMin ? salarioMin : salario28;
+      const salarioBase = proLaboreNum > 0 ? proLaboreNum : (salario28 < salarioMin ? salarioMin : salario28);
       const inss = salarioBase * 0.11; // 11% obrigatório sobre o pró-labore
       const impostoPJ = simples + inss;
 
@@ -54,6 +85,7 @@ const calculoController = {
       const economiaMensal = Math.abs(impostoPJ - impostoPF);
       const melhorOpcao = impostoPJ < impostoPF ? "Pessoa Jurídica (PJ)" : "Pessoa Física (PF)";
 
+      // --- SALVAMENTO NO BANCO DE DADOS (PRISMA) ---
       const novoCalculo = await prisma.calculo.create({
         data: {
           userId,
@@ -67,9 +99,17 @@ const calculoController = {
         }
       });
 
+      // Retorno detalhado da simulação para consumo do Frontend e PDF
       return res.status(201).json({
         message: "Cálculo simulado e salvo com sucesso!",
-        calculo: novoCalculo
+        calculo: novoCalculo,
+        detalhesNP2: {
+          fatorRCalculado: fatorRPercentual,
+          anexoEnquadrado,
+          proLaboreUtilizado: proLaboreNum,
+          inssCalculado: inss,
+          simplesCalculado: simples
+        }
       });
 
     } catch (error) {
