@@ -69,6 +69,26 @@ export default function Navbar() {
               </button>
             </div>
 
+            <div className="h-5 w-px bg-naf-gray/50 opacity-40 mx-0.5" />
+
+            <button onClick={() => navigate('/faq')}
+            className="px-2.5 py-2 rounded-lg text-sm font-medium text-naf-light hover:bg-naf-red hover:text-white transition-all duration-300 cursor-pointer whitespace-nowrap"
+            >
+              FAQ
+            </button>
+
+            <div className="h-5 w-px bg-naf-gray/50 opacity-40 mx-0.5" />
+
+            <button onClick={() => navigate('/Sobre')}
+            className="px-2.5 py-2 rounded-lg text-sm font-medium text-naf-light hover:bg-naf-red hover:text-white transition-all duration-300 cursor-pointer whitespace-nowrap"
+            >
+              Sobre
+            </button>
+
+            <div className="h-5 w-px bg-naf-gray/50 opacity-40 mx-0.5" />
+
+
+
             <button
               onClick={() => handleLogout()}
               className="ml-5 px-4 py-2 bg-transparent border-2 border-naf-red text-naf-light rounded-lg text-sm font-bold hover:bg-naf-red hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer whitespace-nowrap"
