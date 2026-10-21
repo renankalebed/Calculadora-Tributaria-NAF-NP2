@@ -19,17 +19,19 @@ model User {
 }
 
 model Calculo {
-  id             String   @id @default(uuid())
-  userId         String
-  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  tipoProfissao  String
-  faturamento    Float
-  custos         Float?
-  impostoPF      Float
-  impostoPJ      Float
-  melhorOpcao    String   // "PF" ou "PJ"
-  economiaMensal Float
-  createdAt      DateTime @default(now())
+  id              String   @id @default(uuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tipoProfissao   String
+  faturamento     Float
+  custos          Float?
+  proLabore       Float?   // NP2: Armazena o pró-labore informado
+  aliquotaEfetiva Float?   // NP2: Armazena a alíquota final aplicada (ex: 0.06 ou 0.155)
+  impostoPF       Float
+  impostoPJ       Float
+  melhorOpcao     String   // "PF" ou "PJ"
+  economiaMensal  Float
+  createdAt       DateTime @default(now())
 
   @@map("calculos")
 }
