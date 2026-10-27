@@ -116,6 +116,8 @@ export default function CalculoPJ() {
                 <option value="psicologo">Psicólogo(a)</option>
                 <option value="arquiteto">Arquiteto(a)</option>
                 <option value="advogado">Advogado(a)</option>
+                <option value="Medico">Médico(a)</option>
+                <option value="Dentista">Dentista(a)</option>
               </select>
             </div>
 
