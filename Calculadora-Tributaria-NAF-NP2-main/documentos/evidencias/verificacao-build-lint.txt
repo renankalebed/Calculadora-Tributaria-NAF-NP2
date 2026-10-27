@@ -1,0 +1,22 @@
+
+> projetocalculadora-frontend@1.0.0 build
+> vite build --outDir /tmp/naf-final-dist --emptyOutDir
+
+vite v7.3.5 building client environment for production...
+transforming...
+✓ 110 modules transformed.
+rendering chunks...
+computing gzip size...
+../../../tmp/naf-final-dist/index.html                     0.62 kB │ gzip:   0.39 kB
+../../../tmp/naf-final-dist/assets/index-BFSZkKZf.css     30.75 kB │ gzip:   6.32 kB
+../../../tmp/naf-final-dist/assets/index-ClNEKovt.js   1,330.84 kB │ gzip: 390.01 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 5.79s
+
+> projetocalculadora-frontend@1.0.0 lint
+> eslint .
+
