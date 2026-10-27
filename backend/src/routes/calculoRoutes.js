@@ -4,7 +4,7 @@ const calculoController = require('../controllers/calculoController');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 // Todas as rotas de cálculo exigem autenticação
-    router.use(authMiddleware);
+//router.use(authMiddleware);
 
 // Novo Calculo /api/calculos
 router.post('/', calculoController.create);
