@@ -8,6 +8,8 @@ import CalculoPF from "./Pages/CalculoPF";
 import CalculoPJ from "./Pages/CalculoPJ";
 import Comparativo from "./Pages/Comparativo";
 import Historico from "./Pages/Historico";
+import faq from "./Pages/Faq";
+import Sobre from "./Pages/Sobre";
 
 function App() {
   return (
