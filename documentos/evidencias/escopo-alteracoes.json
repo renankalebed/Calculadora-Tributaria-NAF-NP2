@@ -1,0 +1,21 @@
+{
+  "base_zip_commit": "551a9bbb2d1030ede4ab1bf19bdd6c6b208016ed",
+  "modified_existing_files": [
+    "frontend/index.html",
+    "frontend/src/Pages/Cadastro.jsx",
+    "frontend/src/Pages/CalculoPF.jsx",
+    "frontend/src/Pages/CalculoPJ.jsx",
+    "frontend/src/Pages/Comparativo.jsx",
+    "frontend/src/Pages/Historico.jsx",
+    "frontend/src/Pages/Home.jsx",
+    "frontend/src/Pages/Landing.jsx",
+    "frontend/src/Pages/Login.jsx",
+    "frontend/src/Pages/RecuperarSenha.jsx",
+    "frontend/src/components/Footer.jsx",
+    "frontend/src/components/Navbar.jsx",
+    "frontend/src/index.css"
+  ],
+  "backend_unchanged": true,
+  "global_routes_unchanged": true,
+  "calculation_and_pdf_handlers_unchanged": true
+}

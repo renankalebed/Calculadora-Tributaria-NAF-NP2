@@ -1,0 +1,47 @@
+[
+  {
+    "path": "/",
+    "score": 100,
+    "failed": []
+  },
+  {
+    "path": "/login",
+    "score": 100,
+    "failed": []
+  },
+  {
+    "path": "/cadastro",
+    "score": 100,
+    "failed": []
+  },
+  {
+    "path": "/RecuperarSenha",
+    "score": 100,
+    "failed": []
+  },
+  {
+    "path": "/Home",
+    "score": 100,
+    "failed": []
+  },
+  {
+    "path": "/calculo-pf",
+    "score": 100,
+    "failed": []
+  },
+  {
+    "path": "/calculo-pj",
+    "score": 100,
+    "failed": []
+  },
+  {
+    "path": "/comparativo",
+    "score": 100,
+    "failed": []
+  },
+  {
+    "path": "/historico",
+    "score": 100,
+    "failed": []
+  }
+]
