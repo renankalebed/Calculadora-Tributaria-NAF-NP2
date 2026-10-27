@@ -1,0 +1,230 @@
+
+.sobre-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  color: #1f2937;
+}
+
+.sobre-hero {
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 24px;
+}
+
+.sobre-etiqueta {
+  display: inline-block;
+  padding: 8px 14px;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  background: #e8f1fc;
+  color: #24558a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sobre-hero h1 {
+  margin: 0 0 16px;
+  font-size: clamp(32px, 5vw, 48px);
+  color: #163b64;
+}
+
+.sobre-hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #596579;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.sobre-card {
+  padding: 28px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #e5eaf0;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(20, 40, 70, 0.05);
+}
+
+.sobre-icone {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.sobre-card h2 {
+  margin: 0 0 12px;
+  color: #163b64;
+  font-size: 22px;
+}
+
+.sobre-card p {
+  margin: 0;
+  color: #596579;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.sobre-card .sobre-email {
+  margin-top: 16px;
+  font-weight: 600;
+  color: #24558a;
+}
+
+.sobre-footer {
+  padding: 24px 12px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .sobre-container {
+    padding: 24px 16px;
+  }
+
+  .sobre-hero {
+    padding: 28px 8px;
+  }
+
+  .sobre-card {
+    padding: 22px;
+  }
+}
+
+.sobre-controles {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.sobre-tema-botao {
+    padding: 10px 16px;
+    border: 1px solid #d5dfeb;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #163b64;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.sobre-tema-botao:hover {
+    background: #e8f1fc;
+}
+
+.sobre-tema-botao:focus-visible {
+    outline: 3px solid #8bb5e3;
+    outline-offset: 3px;
+}
+
+.sobre-container.modo-escuro {
+    color: #e5e7eb;
+    background: #111827;
+    border-radius: 16px;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.modo-escuro .sobre-hero h1,
+.modo-escuro .sobre-card h2 {
+    color: #93c5fd;
+}
+
+.modo-escuro .sobre-hero p,
+.modo-escuro .sobre-card p,
+.modo-escuro .sobre-footer {
+    color: #cbd5e1;
+}
+
+.modo-escuro .sobre-card,
+.modo-escuro .sobre-aba {
+    background: #1f2937;
+    border-color: #374151;
+    box-shadow: none;
+}
+
+.modo-escuro .sobre-aba:has(.sobre-aba-conteudo) {
+    border-color: #60a5fa;
+}
+
+.modo-escuro .sobre-aba-botao {
+    color: #e5e7eb;
+}
+
+.modo-escuro .sobre-aba-botao:hover {
+    background: #273449;
+}
+
+.modo-escuro .sobre-aba-simbolo {
+    color: #93c5fd;
+}
+
+.modo-escuro .sobre-aba-conteudo {
+    color: #cbd5e1;
+}
+
+.modo-escuro .sobre-contato {
+    background: #172337;
+    border-color: #374151;
+}
+
+.modo-escuro .sobre-contato-status {
+    background: #263d5c;
+    color: #bfdbfe;
+}
+
+.modo-escuro .sobre-tag {
+    background: #263d5c;
+    color: #bfdbfe;
+}
+
+.modo-escuro .sobre-tema-botao {
+    background: #1f2937;
+    color: #f9fafb;
+    border-color: #4b5563;
+}
+
+.modo-escuro .sobre-tema-botao:hover {
+    background: #374151;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sobre-container.modo-escuro,
+    .sobre-tema-botao {
+        transition: none;
+    }
+}
+.sobre-pagina {
+    min-height: 100vh;
+    width: 100%;
+    background: #f8fafc;
+    color: #1f2937;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+/* O conteúdo continua centralizado */
+.sobre-pagina .sobre-container {
+    background: transparent;
+}
+
+/* Modo escuro na página inteira */
+.sobre-pagina.modo-escuro {
+    background: #111827;
+    color: #e5e7eb;
+}
+
+/* Evita que o conteúdo fique com fundo próprio */
+.sobre-pagina.modo-escuro .sobre-container {
+    background: transparent;
+}
