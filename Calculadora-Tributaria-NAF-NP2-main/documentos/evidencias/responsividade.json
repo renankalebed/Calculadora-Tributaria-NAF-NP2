@@ -1,0 +1,290 @@
+[
+  {
+    "path": "/",
+    "width": 320,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/login",
+    "width": 320,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/cadastro",
+    "width": 320,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/RecuperarSenha",
+    "width": 320,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/Home",
+    "width": 320,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/calculo-pf",
+    "width": 320,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/calculo-pj",
+    "width": 320,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/comparativo",
+    "width": 320,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/historico",
+    "width": 320,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/",
+    "width": 375,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/login",
+    "width": 375,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/cadastro",
+    "width": 375,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/RecuperarSenha",
+    "width": 375,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/Home",
+    "width": 375,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/calculo-pf",
+    "width": 375,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/calculo-pj",
+    "width": 375,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/comparativo",
+    "width": 375,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/historico",
+    "width": 375,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/",
+    "width": 768,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/login",
+    "width": 768,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/cadastro",
+    "width": 768,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/RecuperarSenha",
+    "width": 768,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/Home",
+    "width": 768,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/calculo-pf",
+    "width": 768,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/calculo-pj",
+    "width": 768,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/comparativo",
+    "width": 768,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/historico",
+    "width": 768,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/",
+    "width": 1440,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/login",
+    "width": 1440,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/cadastro",
+    "width": 1440,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/RecuperarSenha",
+    "width": 1440,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/Home",
+    "width": 1440,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/calculo-pf",
+    "width": 1440,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/calculo-pj",
+    "width": 1440,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/comparativo",
+    "width": 1440,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  },
+  {
+    "path": "/historico",
+    "width": 1440,
+    "overflow": false,
+    "unlabelled": [],
+    "main": true,
+    "offenders": []
+  }
+]
