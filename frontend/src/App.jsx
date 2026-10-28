@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Landing from "./Pages/Landing";
-import Login from "./Pages/Login";
-import Cadastro from "./Pages/Cadastro";
-import RecuperarSenha from "./Pages/RecuperarSenha";
-import Home from "./Pages/Home";
-import CalculoPF from "./Pages/CalculoPF";
-import CalculoPJ from "./Pages/CalculoPJ";
-import Comparativo from "./Pages/Comparativo";
-import Historico from "./Pages/Historico";
-import Faq from "./Pages/Faq";
-import Sobre from "./Pages/Sobre";
+import Landing from "./Pages/Landing.jsx";
+import Login from "./Pages/Login.jsx";
+import Cadastro from "./Pages/Cadastro.jsx";
+import RecuperarSenha from "./Pages/RecuperarSenha.jsx";
+import Home from "./Pages/Home.jsx";
+import CalculoPF from "./Pages/CalculoPF.jsx";
+import CalculoPJ from "./Pages/CalculoPJ.jsx";
+import Comparativo from "./Pages/Comparativo.jsx";
+import Historico from "./Pages/Historico.jsx";
+import Faq from "./Pages/Faq.jsx";
+import Sobre from "./Pages/Sobre.jsx";
 
 function App() {
   return (
