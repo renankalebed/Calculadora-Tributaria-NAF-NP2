@@ -27,7 +27,7 @@ function App() {
         <Route path="/calculo-pj" element={<CalculoPJ />} />
         <Route path="/comparativo" element={<Comparativo />} />
         <Route path="/historico" element={<Historico />} />
-        <Router path="/Faq" element={<Faq />} />
+        <Router path="/faq" element={<Faq />} />
         <Router path="/Sobre" element={<Sobre />} />
       </Routes>
     </BrowserRouter>
