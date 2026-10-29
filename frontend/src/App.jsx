@@ -10,22 +10,8 @@ import Comparativo from "./Pages/Comparativo";
 import Historico from "./Pages/Historico";
 import Faq from "./Pages/Faq";
 import Sobre from "./Pages/Sobre";
+import NotFound from "./Pages/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
-
-function NotFound() {
-return (
-<main className="flex min-h-screen flex-col items-center justify-center gap-4 p-6 text-center">
-<h1 className="text-5xl font-bold">404</h1>
-<p className="text-lg">Página não encontrada.</p>
-<a
-     href="/"
-     className="rounded-lg bg-[#CD371F] px-5 py-3 font-bold text-white"
-   >
-Voltar ao início
-</a>
-</main>
-);
-}
 
 function App() {
   return (
