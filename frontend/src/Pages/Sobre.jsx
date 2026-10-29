@@ -8,6 +8,8 @@ export default function Sobre() {
     const [modoEscuro, setModoEscuro] = useState(false);
     const navigate = useNavigate();
     return (
+  <>
+    <Navbar />
     <div className={modoEscuro ? "sobre-pagina modo-escuro" : "sobre-pagina"}>
         <main className="sobre-container">
             <div className="sobre-controle">
@@ -43,5 +45,6 @@ export default function Sobre() {
             </footer>
         </main>
     </div>
+  </>
     );
 }
