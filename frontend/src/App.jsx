@@ -10,7 +10,6 @@ import Comparativo from "./Pages/Comparativo";
 import Historico from "./Pages/Historico";
 import Faq from "./Pages/Faq";
 import Sobre from "./Pages/Sobre";
-import NavBar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function NotFound() {
@@ -31,7 +30,6 @@ Voltar ao início
 function App() {
   return (
     <>
-    <NavBar />
       <Routes element={<ProtectedRoute />}>
         {/* Rotas Públicas */}
         <Route path="/" element={<Landing />} />
