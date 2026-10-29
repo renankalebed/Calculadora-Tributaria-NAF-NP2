@@ -123,6 +123,8 @@ export default function Faq() {
   }
 
   return (
+  <>
+    <Navbar />
     <main className={`chat-faq ${modoEscuro ? "tema-escuro" : "tema-claro"}`}>
       <header className="chat-cabecalho">
         <div className="chat-avatar">N</div>
@@ -176,5 +178,6 @@ export default function Faq() {
         </div>
       </section>
     </main>
+  </>
   );
 }
