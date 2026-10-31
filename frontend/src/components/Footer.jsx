@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <h3 className="font-bold text-lg mb-1 tracking-wide">Calculadora Tributária NAF</h3>
           <p className="text-sm text-naf-gray">
-            Desenvolvido por <span className="font-medium text-white">Alisson Almeida de Oliveira</span>
+            Desenvolvido pela <span className="font-medium text-white">Equipe setNotaDez</span>
           </p>
         </div>
 

@@ -1,12 +1,9 @@
-import {useState} from "react";
+import { useState } from "react";
 import "./Sobre.css";
-import { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import { useNavigate } from "react-router-dom"
 
 export default function Sobre() {
     const [modoEscuro, setModoEscuro] = useState(false);
-    const navigate = useNavigate();
     return (
   <>
     <Navbar />

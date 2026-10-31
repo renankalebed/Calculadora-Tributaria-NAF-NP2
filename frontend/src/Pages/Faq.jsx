@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Faq.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
-import { useNavigate } from "react-router-dom"
 
 const perguntasSugeridas = [
   "Como usar a calculadora?",
@@ -45,14 +44,14 @@ const respostas = [
     palavras: ["naf", "sobre", "instituicao", "institucional"],
     texto:
       "Na página Sobre, você pode consultar as informações institucionais do NAF e o canal de contato disponibilizado pelo projeto.",
-    link: "/sobre",
+    link: "/Sobre",
     nomeLink: "Conhecer o NAF",
   },
   {
     palavras: ["contato", "email", "e-mail", "telefone"],
     texto:
       "Para encontrar o canal de contato oficial, acesse a página Sobre. Utilize somente os dados de contato confirmados pela equipe do projeto.",
-    link: "/sobre",
+    link: "/Sobre",
     nomeLink: "Ver contato",
   },
   {
@@ -85,7 +84,6 @@ function encontrarResposta(mensagem) {
 }
 
 export default function Faq() {
-  const navigate = useNavigate();
   const [modoEscuro, setModoEscuro] = useState(false);
   const [mensagem, setMensagem] = useState("");
   const [conversa, setConversa] = useState([
@@ -101,7 +99,9 @@ export default function Faq() {
 
     if (!texto) return;
 
-    const resposta = encontrarResposta(texto);
+    const resposta = encontrarResposta(texto) ?? {
+      texto: "Desculpe, não encontrei uma resposta pronta para essa dúvida. Tente uma pergunta sobre cálculo, histórico, comparativo ou sobre o NAF.",
+    };
 
     setConversa((anterior) => [
       ...anterior,
@@ -115,11 +115,6 @@ export default function Faq() {
     ]);
 
     setMensagem("");
-  }
-
-  function enviarFormulario(evento) {
-    evento.preventDefault();
-    enviarMensagem();
   }
 
   return (

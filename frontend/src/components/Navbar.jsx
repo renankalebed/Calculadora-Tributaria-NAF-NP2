@@ -16,9 +16,6 @@ export default function Navbar() {
     setMenuAberto(false);
     navigate(rota);
   };
-  const estiloMenuMobile = menuAberto
-  ? "max-h-[500px] opacity-100 translate-y-0"
-  : "max-h-0 opacity-0 -translate-y-2 pointer-events-none";
 
   const links = [
     { nome: "Página Inicial", rota: "/Home" },
@@ -39,25 +36,26 @@ export default function Navbar() {
     <nav className="w-full bg-naf-blue shadow-lg border-b border-naf-gray/20">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          
-          <div 
-            onClick={() => navigate('/Home')}
+          <div
+            onClick={() => navigate("/Home")}
             className="flex-shrink-0 text-xl font-bold text-white tracking-wide cursor-pointer hover:text-naf-gray transition-colors duration-300"
             title="Voltar para a Página Inicial"
           >
             Calculadora Tributária
-          </button>
+          </div>
 
-          <div className="flex items-center">
+          <div className="hidden md:flex items-center">
             <div className="flex items-center space-x-1">
-              <button
-                key={link.rota}
-                onClick={() => navegar(link.rota)}
-                className={classeLink}
-              >
-                {link.nome}
-              </button>
-            ))}
+              {links.map((link) => (
+                <button
+                  key={link.rota}
+                  onClick={() => navegar(link.rota)}
+                  className={classeLink}
+                >
+                  {link.nome}
+                </button>
+              ))}
+            </div>
 
             <button
               onClick={handleLogout}
