@@ -9,7 +9,7 @@ export default function Landing() {
   const faqs = [
     {
       pergunta: "Para quem é esta calculadora?",
-      resposta: "Foi desenvolvida especialmente para Psicólogos, Arquitetos e Advogados que desejam descobrir de forma rápida se é mais barato atuar como Pessoa Física ou abrir um CNPJ (Pessoa Jurídica)."
+      resposta: "Foi desenvolvida especialmente para Médicos, Dentistas, Psicólogos, Arquitetos e Advogados que desejam descobrir de forma rápida se é mais barato atuar como Pessoa Física ou abrir um CNPJ (Pessoa Jurídica)."
     },
     {
       pergunta: "Quais tributos são considerados no comparativo?",
@@ -21,7 +21,7 @@ export default function Landing() {
     },
     {
       pergunta: "O que é o Fator R que o sistema menciona?",
-      resposta: "O Fator R é uma regra do Simples Nacional que afeta Psicólogos e Arquitetos. Ela diz que se a sua folha de pagamento (incluindo seu pró-labore) for igual ou maior que 28% do faturamento, seu imposto cai para 6% (Anexo III). A nossa ferramenta já faz esse cálculo automaticamente para você!"
+      resposta: "O Fator R é uma regra do Simples Nacional que afeta Médicos, Dentistas, Psicólogos e Arquitetos. Ela diz que se a sua folha de pagamento (incluindo seu pró-labore) for igual ou maior que 28% do faturamento, seu imposto cai para 6% (Anexo III). A nossa ferramenta já faz esse cálculo automaticamente para você!"
     },
     {
       pergunta: "A calculadora substitui um contador?",
