@@ -46,7 +46,6 @@ Os cálculos da paleta estão em [contraste-paleta.json](evidencias/contraste-pa
 
 Resultados com fixtures demonstram comportamento de interface; não comprovam precisão tributária, API, JWT, banco, envio de email ou PDF. As evidências `resultado-fixture-*` e `historico-fixture-*` contêm dados arbitrários. Não foram executados testes com leitores de tela, dispositivos físicos ou integração real. Lighthouse/axe não certificam conformidade integral com WCAG.
 
-Completar a identificação acadêmica e confirmar as atividades dos quatro integrantes. Encaminhar os destinos ausentes de FAQ/Sobre ao Membro 2 e homologar cálculos com o Membro 1 e exportação com o Membro 3. Consulte o [plano de testes](PLANO_DE_TESTES.md).
 
 ## Arquivos de verificação
 
